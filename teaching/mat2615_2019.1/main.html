@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ 
+<head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAT2615 - Introdu&ccedil;&atilde;o &agrave; an&aacute;lise de Fourier </title>
+        
+        <style> 
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  10px ;
+    }
+ul, ol {
+  padding: 15;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+</style>
+
+
+<link rel="stylesheet" href="https://themes.gohugo.io/theme/minimal/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">MAT2615, Per&iacute;odo 2019.1 </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                            <li><a href="informativo-revisado.pdf">Informativo</a></li>
+                            
+                            
+
+                            <li><a href="listas.html">Listas</a></li>   
+                            
+                            <li><a href="diario.html">Di&aacute;rio do curso</a></li>
+
+                               
+                            
+                        </ul>
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="main.html">MAT2615, Per&iacute;odo 2019.1</a></li>
+                            
+                            
+                        </ul>
+                        
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h2><a href="main.html" style="text-decoration:none">Introdu&ccedil;&atilde;o &agrave; an&aacute;lise de Fourier</a></h2>
+    
+    
+    
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+    
+<Br>    
+
+    <p>A disciplina tem por objetivo familiarizar os estudantes com elementos b&aacute;sicos da an&aacute;lise de Fourier (tais quais s&eacute;ries de Fourier, tipos de converg&ecirc;ncia de s&eacute;ries de Fourier, a transformada de Fourier na reta e no espa&ccedil;o euclidiano e aplica&ccedil;&otilde;es cl&aacute;ssicas destes conceitos). </p>
+    
+    <p>Neste sentido os alunos estar&atilde;o aptos para o estudo de temas de pesquisa em an&aacute;lise harm&ocirc;nica, equa&ccedil;&otilde;es diferenciais parciais, sistemas din&acirc;micos, dentre outros. </p>
+    
+<br>   
+    
+    <img src="foto.jpg" alt="uncertainty" class="center">
+
+<br><br>
+    
+
+    <h3>Pr&eacute;-requisitos</h3> 
+    
+    <p>An&aacute;lise no espa&ccedil;o euclidiano, an&aacute;lise complexa (elementar), &aacute;lgebra linear. <p/>
+
+<p>Ao apresentar a ementa sem exigir conhecimentos pr&eacute;vios em teoria da medida, o curso atende a estudantes em diversos est&aacute;gios de forma&ccedil;&atilde;o, do bacharelado &agrave; p&oacute;s-gradua&ccedil;&atilde;o.    </p>
+    
+    <br>
+
+<h3 id="Prof">Professor</h3>
+
+    
+<p>Nome:  &nbsp Silvius Klein </p>
+    
+<p>Sala:  &nbsp  &nbsp &nbsp L749 </p>
+
+<p>Email:   &nbsp &nbsp silviusk [arroba] impa [ponto] br </p>  
+<br>
+    
+
+<h3 id="Aulas">Aulas</h3>    
+
+<p>Hora:  &nbsp &nbsp segundas e quartas das 15 &agrave;s 17 </p>  
+<p>Local:   &nbsp &nbsp  L856</p>  
+ <br>  
+
+<h3>Hor&aacute;rio de atendimento </h3>    
+
+<p>Hora:   &nbsp  &nbsp segundas e quartas das 17h00 &agrave;s 17h30 </p>  
+<p>Local:  &nbsp  &nbsp L749 ou sala de aula</p>  
+ <br>   
+
+
+<h3>Bibliografia </h3>    
+
+<p><font color=red>[Stein]</font> &nbsp Elias M. Stein & Rami Shakarchi, <i>Fourier Analysis: An Introduction</i>, Princeton Lectures in Analysis, vol I, Princeton University Press
+ </p>  
+<p><p><font color=red>[deFDG]</font> &nbsp Djairo Guedes de Figueiredo, <i>An&aacute;lise de Fourier e Equa&ccedil;&otilde;es Diferenciais Parciais</i>, IMPA, Cole&ccedil;&atilde;o Projeto Euclides </p>  
+ <br> 
+    
+    
+<h3>Material de apoio </h3>    
+
+<p> Loukas Grafakos, <i>Classical Fourier analysis</i>, Vol. 2. New York: Springer
+</p>  
+<p>Thomas William K&ouml;rner, <i>Fourier analysis</i>, Cambridge University Press
+ </p>  
+ <br>     
+
+<h3>Avalia&ccedil;&atilde;o </h3>       
+
+<p>Duas listas de exerc&iacute;cios para entregar durante o semestre.</p>
+    
+<p>Dois exames escritos (um no meio do semestre e o outro no final) seguidos por uma discuss&atilde;o com o professor. Datas: 8 de maio e 4 de julho.</p> 
+
+<p>C&aacute;lculo da nota final: 15% cada lista de exerc&iacute;cios, 35% cada exame. </p>
+    
+<br> 
+  
+<h3>Ementa do curso </h3> 
+<ol>
+  <li value="1">A g&ecirc;nese da an&aacute;lise de Fourier.</li>
+  <li>Propriedades b&aacute;sicas das s&eacute;ries de Fourier: introdu&ccedil;&atilde;o aos problemas e exemplos; unicidade da s&eacute;rie de Fourier; convolu&ccedil;&otilde;es e suas propriedades; n&uacute;cleos de somabilidade. </li>
+  <li>Converg&ecirc;ncia das s&eacute;ries de Fourier: revis&atilde;o de no&ccedil;&otilde;es elementares de espa&ccedil;os vetoriais e produto interno; converg&ecirc;ncia no sentido quadr&aacute;tico-m&eacute;dio. Converg&ecirc;ncia pontual; um resultado local e um exemplo de fun&ccedil;&atilde;o cont&iacute;nua com s&eacute;rie de Fourier divergente. </li>
+  <li>A transformada de Fourier na reta: defini&ccedil;&atilde;o da transformada de Fourier no espa&ccedil;o de fun&ccedil;&otilde;es de decrescimento moderado; o espa&ccedil;o de Schwartz; a f&oacute;rmula de invers&atilde;o de Fourier; o teorema de Plancherel; a f&oacute;rmula de somabilidade de Poisson; o princ&iacute;pio da incerteza de Heisenberg; aplica&ccedil;&otilde;es em EDP.  </li>
+</ol>    
+    
+   
+    
+</main>
+
+        <footer>
+
+           
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ 
+<head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAT2621 - Medida e Integra&ccedil;&atilde;o </title>
+        
+        <style> 
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  10px ;
+    }
+ul, ol {
+  padding: 15;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+</style>
+
+
+<link rel="stylesheet" href="https://themes.gohugo.io/theme/minimal/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">MAT2621, Per&iacute;odo 2020.1 </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                            <li><a href="informativo.pdf">Informativo</a></li>
+                            
+                            <li><a href="assuntos_gerais.html">Assuntos gerais</a></li>
+
+                            <li><a href="listas.html">Listas</a></li>   
+                            
+                            <li><a href="notas.html">Notas de aula</a></li>
+
+                               
+                            
+                        </ul>
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="main.html">MAT2621, Per&iacute;odo 2020.1</a></li>
+                            
+                            
+                        </ul>
+                        
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h2><a href="main.html" style="text-decoration:none">Medida e Integra&ccedil;&atilde;o</a></h2>
+    
+    
+    
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+    
+<Br>    
+
+<p>O objetivo principal deste curso &eacute; o estudo da medida de Lebesgue e da integral de Lebesgue. A integra&ccedil;&atilde;o de Lebesgue &eacute; um refinamento da teoria da integra&ccedil;&atilde;o de Riemann, proporcionando uma ferramenta mais fina para a matem&aacute;tica avan&ccedil;ada. </p> 
+
+<p>O curso tamb&eacute;m oferece uma base s&oacute;lida para o estudo de temas de pesquisa em sistemas din&acirc;micos, probabilidades, an&aacute;lise harm&ocirc;nica,  dentre outros.</p>
+    
+<br>   
+    
+    <img src="foto.jpg" alt="circle packing" style="width:110%;">
+    
+<br><br>    
+    
+    A imagem acima &eacute; uma representa&ccedil;&atilde;o razoavelmente precisa das t&eacute;cnicas e t&oacute;picos de estudo neste curso. Para tornar a representa&ccedil;&atilde;o ainda mais precisa, aumente a resolu&ccedil;&atilde;o (escolhendo quadrados menores). 
+
+<br><br>
+    
+
+    <h3>Pr&eacute;-requisitos</h3> 
+    
+    
+<p>An&aacute;lise real e an&aacute;lise no espa&ccedil;o <span class="math inline">\(\mathbb{R}^n\)</span>. </p>
+    
+    <br>
+
+<h3 id="Prof">Professor</h3>
+
+    
+<p>Nome:  &nbsp Silvius Klein </p>
+    
+<p>Sala:  &nbsp  &nbsp &nbsp L749 </p>
+
+<p>Email:   &nbsp &nbsp silviusk [arroba] impa [ponto] br </p>  
+<br>
+    
+
+<h3 id="Aulas">Aulas</h3>    
+
+<p>Hor&aacute;rio, local:  &nbsp &nbsp segundas (L528) e quartas (L518) das 15 &agrave;s 17 </p>  
+<p>Atendimento:   &nbsp &nbsp  depois de cada aula.</p>  
+ <br>  
+
+ 
+
+
+<h3>Bibliografia </h3>    
+
+<p><font color=red>[Tao-book]</font> &nbsp Terence Tao, <i></i>An introduction to measure theory</i>, AMS, Graduate Studies in Mathematics, dispon&iacute;vel online <a href="https://tinyurl.com/taobookMT" target='empty'>aqui</a>.
+
+ </p>  
+
+<p><font color=red>[Tao-blogLRN]</font> &nbsp Terence Tao, artigo deste <a href="https://tinyurl.com/taoblogLRN" target='empty'>blog</a>.
+
+ </p>  
+
+<p><font color=red>[Tao-blogRMK]</font> &nbsp Terence Tao, artigo deste <a href="https://tinyurl.com/taoblogRMK" target='empty'>blog</a>.
+
+ </p>  
+
+<p><p><font color=red>[Stein]</font> &nbsp Elias M. Stein & Rami Shakarchi, <i>​Real Analysis: Measure Theory, Integration and Hilbert Spaces</i>, Princeton Lectures in Analysis, vol III, Princeton University Press.
+ </p>  
+ <br> 
+    
+    
+
+    
+
+<h3>Avalia&ccedil;&atilde;o </h3>       
+
+<p>Listas de exerc&iacute;cios para entregar durante o semestre.</p>
+    
+<p>Dois exames escritos (um no meio do semestre e o outro no final). Datas: 29 de abril e primeiro de julho.</p> 
+
+<p>C&aacute;lculo da nota final: 30% listas de exerc&iacute;cios, 35% cada exame. </p>
+    
+<br> 
+  
+<h3>Ementa do curso (sujeito a altera&ccedil;&otilde;es) </h3> 
+<ol>
+<li value="1">A teoria de Jordan-Riemann-Darboux      &nbsp &nbsp     [Tao-book] 1.1 
+<ol>
+<li>O problema de mensurabilidade</li>
+<li>Medida elementar</li>
+<li>Medida de Jordan</li>
+<li>A integral de Riemann-Darboux</li>
+</ol>
+
+</li>
+
+<li>A medida de Lebesgue            &nbsp &nbsp                      [Tao-book] 1.2
+<ol>
+<li>A medida externa de Lebesgue: defini&ccedil;&atilde;o, exemplos, o truque <span class="math inline">\(\frac{\epsilon}{2^n}\)</span></li>
+<li>Conjuntos Lebesgue mensur&aacute;veis: defini&ccedil;&atilde;o via o primeiro princ&iacute;pio de Littlewood</li>
+<li>Propriedades da medida externa de Lebesgue</li>
+<li>Propriedades dos conjuntos Lebesgue mensur&aacute;veis</li>
+<li>O crit&eacute;rio de mensurabilidade de Carath&eacute;odory</li>
+<li>Unicidade da medida de Lebesgue</li>
+<li>Exemplo de um conjunto n&atilde;o mensur&aacute;vel</li>
+
+</ol>
+  </li>
+
+<li>A integral de Lebesgue                 &nbsp &nbsp                 [Tao-book] 1.3
+
+<ol>
+<li>Uma pr&eacute;via da integral de Lebesgue</li>
+<li>Integra&ccedil;&atilde;o de fun&ccedil;&otilde;es simples</li>
+<li>Fun&ccedil;&otilde;es mensur&aacute;veis</li>
+<li>A integral de Lebesgue de fun&ccedil;&otilde;es mensur&aacute;veis n&atilde;o-negativas (integralsem sinal) e integrabilidade absoluta</li>
+<li>Propriedades b&aacute;sicas da integral sem sinal: interpreta&ccedil;&atilde;o de &aacute;rea, linearidade e unicidade da integral de Lebesgue, compatibilidade com a integral de Riemann-Darboux</li>
+<li>Integrabilidade absoluta, os espa&ccedil;os <span class="math inline">\(L^p\)</span>, a desigualdade de Markov</li>
+<li>O segundo princ&iacute;pio de Littlewood (o teorema de Lusin) e o terceiro princ&iacute;pio de Littlewood (o teorema de Egorov)</li>
+
+</ol>
+ </li>
+
+<li>Espa&ccedil;os de medida abstratos &nbsp &nbsp [Tao-book] 1.4 e 1.5 
+
+<ol>
+<li><span class="math inline">\(\sigma\)</span>-&aacute;lgebras e espa&ccedil;os mensur&aacute;veis</li>
+<li>Medidas abstratas</li>
+<li>Fun&ccedil;&otilde;es mensur&aacute;veis</li>
+<li>A integral de uma fun&ccedil;&atilde;o mensur&aacute;vel num espa&ccedil;o de medida abstrato</li>
+<li>Os teoremas de converg&ecirc;ncia: converg&ecirc;ncia mon&oacute;tona, o teorema de Tonelli, o lema de Borel-Cantelli, o lema de Fatou, o teorema deconverg&ecirc;ncia dominada</li>
+<li>Modos de converg&ecirc;ncia</li>
+
+</ol>
+
+</li> 
+
+<li>Teoremas de diferencia&ccedil;&atilde;o &nbsp &nbsp [Tao-book] 1.6  
+
+
+<ol>
+<li>O teorema fundamental do c&aacute;lculo</li>
+<li>O teorema de diferencia&ccedil;&atilde;o de Lebesgue (em dimens&atilde;o um): formula&ccedil;&atilde;o e demonstra&ccedil;&atilde;o
+<ul>
+<li> O lema do sol nascente</li>
+<li> O operador maximal de Hardy-Littlewood</li>
+<li> A desigualdade de Hardy-Littlewood</li>
+</ul>
+</li>
+<li>Fun&ccedil;&otilde;es absolutamente cont&iacute;nuas e o teorema fundamental do c&aacute;lculo para integrais de Lebesgue</li>
+
+</ol>
+
+ </li>
+
+
+
+<li>Constru&ccedil;&atilde;o abstrata de medidas &nbsp &nbsp [Tao-book] 1.7  
+
+<ol>
+<li>Medidas externas e o teorema de extens&atilde;o de Carath&eacute;odory</li>
+<li>Pre-medidas e o teorema de extens&atilde;o de Kolmogorov</li>
+<li>A medida de Lebesgue-Stieljes</li>
+<li>A medida produto</li>
+
+
+</ol>
+
+
+</li>
+
+<li>T&oacute;picos avan&ccedil;ados em teoria da medida &nbsp &nbsp [Tao-blogLRN] e [Tao-blogRMK] 
+
+
+<ol>
+<li>Medidas com sinal; o teorema de decomposi&ccedil;&atilde;o de Hahn; o teorema dedecomposi&ccedil;&atilde;o de Jordan</li>
+<li>O teorema de Radon-Nikodym; o teorema de decomposi&ccedil;&atilde;o de Lebesgue para medidas; fun&ccedil;&otilde;es de distribui&ccedil;&atilde;o das medidas de Borel na reta real</li>
+<li>O teorema de representa&ccedil;&atilde;o de Riesz&ndash;Markov&ndash;Kakutani</li>
+
+
+
+</ol>
+
+
+ </li>
+
+
+
+</ol>    
+
+
+    
+</main>
+
+        <footer>
+
+           
+
+        </footer>
+       
+    </body>
+
+</html>
+
