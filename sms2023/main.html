@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ 
+<head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Introduction to almost periodic problems </title>
+        
+        <style> 
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  10px ;
+    }
+ul, ol {
+  padding: 15;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+</style>
+
+
+
+<link rel="stylesheet" href="main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                             
+                            
+                            
+
+                               
+                            
+                        </ul>
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.crmath.ca/en/activities/#/type/activity/id/3849.html">MS 2023 - Periodic and Ergodic Spectral Problems</a></li>
+                            
+                            
+                        </ul>
+                        
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h2><a href="main.html" style="text-decoration:none">Introduction to almost periodic problems</a></h2>
+    
+    
+    
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+    
+<Br>    
+
+    <p>
+    The main goals of this mini-course are to provide a rigorous introduction to the theory of Lyapunov exponents of linear cocycles; to discuss the positivity of the (maximal) Lyapunov exponent of quasi-periodic Schrödinger cocycles via Herman's subharmonicity method; and to describe some ideas for deriving large deviations estimates for quasi-periodic cocycles.   
+        </p>
+    
+<br>   
+    
+    <img src="foto.jpg" alt="buterfly" class="center">
+
+<br><br>
+    
+
+    
+
+
+<h3>Main references </h3>    
+
+<p><font color=red>[Bourgain]</font> &nbsp J. Bourgain, <i>Green's Function Estimates for Lattice Schrödinger Operators and Applications</i>, Princeton University Press (2005).
+ </p>  
+    
+<p><font color=red>[DK1]</font> &nbsp P. Duarte, S. Klein, <i>Lyapunov Exponents of Linear Cocycles: Continuity via Large Deviations</i>, Atlantis Series in Dynamical Systems Vol 3 (2016).
+ </p> 
+    
+<p><font color=red>[DK2]</font> &nbsp P. Duarte, S. Klein, <i>Continuity of the Lyapunov Exponents of Linear Cocycles</i>, Publicações Matemáticas do IMPA (2017). <a href="https://impa.br/wp-content/uploads/2017/08/31CBM_02.pdf">Link</a> to pdf file.
+ </p> 
+    
+<p><font color=red>[Viana]</font> &nbsp M. Viana, <i>Lectures on Lyapunov Exponents</i>, Cambridge University Press (2014). 
+ </p>      
+
+ <br> 
+    
+    
+<h3>Additional references </h3>   
+  
+<p><font color=red>[AJS]</font> &nbsp A. Avila, S. Jitomirskaya, C. Sadel, <i>Complex One-Frequency Cocycles</i>, Journal of the European Mathematical Society (2014). 
+ </p>     
+
+<p><font color=red>[CFKS]</font> &nbsp H: L. Cycon, R. G. Froese, W. Kirsch, B. Simon: <i>Schrödinger Operators: With Applications to Quantum Mechanics and Global Geometry.</i>, Springer (1987).
+ </p>  
+    
+<p><font color=red>[Damanik]</font> &nbsp D. Damanik, <i>Schrödinger Operators with Dynamically Defined Potentials</i>, Ergodic Theory and Dynamical Systems (2014). 
+ </p>  
+    
+<p><font color=red>[DaFill]</font> &nbsp D. Damanik, J. Fillman <i>One-Dimensional Ergodic Schrödinger Operators: I. General Theory</i>, AMS (2022). 
+ </p> 
+    
+<p><font color=red>[DK3]</font> &nbsp P. Duarte, S. Klein, <i>Positive Lyapunov Exponents for Higher Dimensional Quasiperiodic Cocycles</i>, Communications in Mathematical Physics (2014).
+ </p> 
+    
+ <p><font color=red>[HaroPuig]</font> &nbsp A. Haro, J. Puig, <i>A Thouless formula and Aubry duality for long-range Schrödinger  skew-products</i>, Nonlinearity (2013).
+ </p>    
+ <br>     
+
+
+
+  
+<h3>Topics </h3> 
+<ol>
+<li value="1"> Linear cocycles and extremal Lyapunov exponents      
+<ol>
+<li>Definition of linear cocycles &nbsp &nbsp     [Viana] 2.1  </li>
+<li>Extremal Lyapunov exponents &nbsp &nbsp     [Viana] 3.1, 3.2 </li>
+<li>Motivating examples &nbsp &nbsp     [Viana] 12.1, [HaroPuig] Sec.1, [DK3] Sec.8</li>
+</ol>
+
+</li>
+
+<li>Hyperbolic cocycles (<span class="math inline">SL<sub>2</sub>(ℝ)</span>-valued)          &nbsp &nbsp                      [Viana] 2.2
+<ol>
+<li>Definition, characterizations</li>
+<li>Simple example + Johnson's theorem &nbsp &nbsp [Damanik] 3.2 </li>
+<li>Dominated splitting &nbsp &nbsp [AJS] Sec.1 </li>
+<li>Non uniformrly hyperbolic cocycles (definition)</li>
+</ol>
+  </li>
+
+<li>Oseledets' multiplicative ergodic theorem (for <span class="math inline">SL<sub>2</sub>(ℝ)</span>-valued cocycles)          &nbsp &nbsp [Viana] 3.4
+
+<ol>
+<li>Statement of the one-sided version</li>
+<li>Statement of the two-sided version</li> 
+<li>Sketch of the proof</li>    
+
+</ol>
+ </li>
+
+<li>Positivity of the Lyapunov exponent and the spectrum of the Schrödinger operator &nbsp &nbsp [CFKS] 9.3, [Damanik] 3.2 
+<ol>
+<li>Anderson localization (definition)</li>     
+<li>Why positivity of the Lyapunov exponent + Oseledets's theorem do not imply localization?</li> 
+<li>Statement of the Ishi-Pastur-Kotani theorem</li> 
+</ol>
+</li> 
+
+
+
+<li>Lyapunov exponents of higher dimensional cocycles
+
+<ol>
+<li>Oseledets' theorem in higher dimensions; non repeated Lyapunov exponents &nbsp &nbsp [Viana] 4.1, 4.2, 4.3 </li>
+<li>The repeated Lyapunov exponents via Kingman's ergodic theorem &nbsp &nbsp [DK1] 1.1.2</li>
+<li>Some linear algebra (singular values, exterior products) &nbsp &nbsp [DK1] 2.1.1, 2.1.2, 2.2.1</li>
+</ol>
+</li>
+
+<li>Positivity of the Lyapunov exponent for quasi-periodic Schrödinger operators via subharmonicity
+
+<ol>
+<li>Herman's argument for the almost Mathieu operator  &nbsp &nbsp [Bourgain] Chap.III </li>
+<li>Subharmonic functions, convexity &nbsp &nbsp [DK2] Chap.5</li>
+<li>Sorets-Spencer's theorem &nbsp &nbsp [DK2] Chap.5, [DK3]</li>
+<li>Avila's acceleration &nbsp &nbsp [AJS] </li>    
+</ol>
+</li>
+    
+ <li>Large deviations estimates (LDE) for quasi-periodic cocycles &nbsp &nbsp [Bourgain] Chap.IV, V, [DK2] Chap.5
+
+<ol>
+<li>General definition of LDE, uniform LDE </li>
+<li>Statement of the LDE for quasiperiodic cocycles</li>
+<li>Almost invariance under translation, reduction to a quantitative Birkhoff ergodic theorem</li>
+<li>Complexification of the phase </li> 
+<li>Decay of the Fourier coefficients </li>
+<li>First attempt to establish LDE (weak estimate) </li> 
+<li>Some arithmetic consideration</li> 
+<li>Second attempt to establish LDE (via finer arithmetics) </li>     
+</ol>
+</li>   
+
+
+
+</ol>    
+
+    
+ 
+    
+    
+    
+</main>
+
+        <footer>
+
+           
+
+        </footer>
+       
+    </body>
+
+</html>
+
