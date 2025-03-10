@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ 
+<head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAT1606/2620 - Análise real</title>
+        
+        <style> 
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  10px ;
+    }
+ul, ol {
+  padding: 15;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+</style>
+
+
+<link rel="stylesheet" href="main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">MAT2640/1620, Per&iacute;odo 2022.1 </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                            <li><a href="informativo.pdf">Informativo</a></li>
+                            
+                            
+
+                            <li><a href="listas.html">Listas</a></li>   
+                            
+                            
+
+                               
+                            
+                        </ul>
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="main.html">MAT1606/2620, Per&iacute;odo 2024.1</a></li>
+                            
+                            
+                        </ul>
+                        
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h2><a href="main.html" style="text-decoration:none">Análise Real</a></h2>
+    
+    
+    
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+    
+<Br>    
+
+    <p>O objetivo principal deste curso é o estudo formal e rigoroso de conceitos e resultados fundamentais de análise real em uma variável, tais como: diferenciação, integração à Riemann, sequências e séries de funções.
+ </p>
+    
+
+    
+<br>   
+    
+    
+    
+
+    <h3>Pr&eacute;-requisitos</h3> 
+    
+    <p>Introdução à análise. <p/>
+
+
+    
+    <br>
+
+<h3 id="Prof">Professor</h3>
+
+    
+<p>Nome:  &nbsp Silvius Klein </p>
+    
+<p>Sala:  &nbsp  &nbsp &nbsp L749 </p>
+
+<p>Email:   &nbsp &nbsp silviusk [arroba] puc-rio [ponto] br </p>  
+<br>
+    
+
+<h3 id="Aulas">Aulas</h3>    
+
+<p>Hora:  &nbsp &nbsp segundas e quartas das 11 &agrave;s 13 </p> 
+
+ 
+    
+<p>Sala:  &nbsp &nbsp L528 </p>
+    
+ 
+    
+<p>Hor&aacute;rio de atendimento: depois de cada aula </p>    
+    
+
+
+ 
+ <br>   
+
+
+<h3>Bibliografia </h3>    
+
+<p><font color=red>[Lima]</font> &nbsp Elon Lages Lima, <i>Curso de Análise Vol. 1</i>, 15ª edição, IMPA, Coleção Projeto Euclides (Capítulos 8, 9 e 10)
+ </p>  
+    
+
+    
+<p><font color=red>[Pugh]</font> &nbsp Charles C. Pugh, <i>Real Mathematical Analysis</i>, Springer, Undergraduate Texts in Mathematics (Capítulos 3 e 4)
+ </p>      
+
+ <br> 
+    
+    
+  
+
+<h3>Avalia&ccedil;&atilde;o </h3>       
+
+<p> Listas de exerc&iacute;cios para entregar durante o semestre.</p>
+    
+<p> Dois exames escritos (um no meio do semestre e o outro no final). </p>
+    
+<p> Datas: 29 de abril e 26 de junho.</p> 
+
+<p>C&aacute;lculo da nota final: critério 2, NF = (G1 + 2 * G2)/ 3, onde G1 = nota do primeiro exame escrito e G2 = nota do segundo exama escrito + listas de exerrcícios. </p>
+    
+<br> 
+  
+<h3>Ementa do curso (sujeito a alterações)</h3> 
+<ol>
+  <li value="1">Revisão de topologia da reta e continuidade de funções na reta
+ <ol>
+<li>Conjuntos abertos, conjuntos fechados, pontos de acumulação, conjuntos compactos
+</li>
+<li>Funções contínuas em intervalos e em conjuntos compactos, continuidade uniforme
+</li>
+<li>O teorema de aproximação de Weierstrass </li>
+</ol>
+</li>
+    
+
+<li>Diferenciação
+ <ol>
+<li>Definição e propriedades da derivada num ponto</li>
+<li>Funções deriváveis num intervalo, o teorema do valor médio
+</li>
+<li>Fórmula de Taylor
+</li>
+<li>Série de Taylor e funções analíticas</li>
+</ol>
+</li>
+    
+<li>Integral de Riemann
+ <ol>
+<li>Integral superior e integral inferior
+</li>
+<li>Funções integráveis
+</li>
+<li>O teorema fundamental do calculo</li>
+<li>Fórmulas clássicas de cálculo integral (mudança de variáveis, integração por partes)
+</li>
+<li>A integral como limite de somas de Riemann
+</li>
+<li>Caracterização das funções integráveis
+</li>
+<li>Logaritmos e exponenciais
+</li>     
+</ol>
+</li>    
+    
+<li>Sequência e séries de funções
+ <ol>
+<li>Convergência simples e convergência uniforme
+</li>
+<li>Propriedades da convergência uniforme
+</li>
+<li>Séries de potências
+</li>
+<li>Funções analíticas</li>
+<li>Equicontinuidade, o teorema de Ascoli-Arzelà</li>
+<li>Séries de Fourier</li>     
+</ol>
+</li>
+    
+</ol>
+    
+    
+    
+    
+    
+</main>
+
+        <footer>
+
+           
+
+        </footer>
+       
+    </body>
+
+</html>
+
