@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ 
+<head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAT1605/2614 - Introdução à Análise </title>
+        
+        <style> 
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  10px ;
+    }
+ul, ol {
+  padding: 15;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+</style>
+
+
+<link rel="stylesheet" href="main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.53" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">MAT1605/2614, Per&iacute;odo 2025.2 </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                            
+                            <li><a href="informativo-revisado.pdf">Informativo</a></li>
+                            
+                            
+
+                            <li><a href="listas.html">Listas</a></li>   
+                            
+                            <li><a href="notas.html">Notas de aula</a></li>
+
+                              <li><a href="provas.html">Provas</a></li>  
+                            
+                        </ul>
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="main.html">MAT1605/2614, Per&iacute;odo 2025.2</a></li>
+                            
+                            
+                        </ul>
+                        
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h2><a href="main.html" style="text-decoration:none">Introdução à Análise</a></h2>
+    
+    
+    
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+    
+<Br>    
+
+<p>O objetivo principal deste curso é o estudo formal e rigoroso dos conceitos básicos de análise real em uma variável, a saber: números naturais e indução matemática; o sistema de números reais; sequências e séries de números reais; elementos de topologia na reta; limites de funções e funções contínuas.  </p>
+        
+<p>Sendo um dos primeiros cursos de matemática no currículo envolvendo definições e demonstrações formais, uma forte ênfase será colocada em como construir um argumento matemático a partir de elementos básicos (axiomas ou teoremas previamente estabelecidos) e em como apresentá-lo por escrito.</p>
+        
+<p>A matemática serve tanto como ferramenta quanto como linguagem universal do conhecimento humano. Este curso visa fornecer o lápis e o abecê para seus estudos futuros... e, como tal, é apropriado presumir que será desafiador e também gratificante. 
+</p>
+    
+
+    
+<br>   
+    
+    
+    
+
+    <h3>Pr&eacute;-requisitos</h3> 
+    
+    <p>Noções básicas de cálculo, mas nenhum pré-requisito formal.  <p/>
+
+
+    
+    <br>
+
+<h3 id="Prof">Professor</h3>
+
+    
+<p>Nome:  &nbsp Silvius Klein </p>
+    
+<p>Sala:  &nbsp  &nbsp &nbsp L749 </p>
+
+<p>Email:   &nbsp &nbsp silviusk [arroba] puc-rio [ponto] br </p>  
+<br>
+    
+
+<h3 id="Aulas">Aulas</h3>    
+
+<p>Hora:  &nbsp &nbsp terças e quintas das 11 &agrave;s 13 </p> 
+
+ 
+    
+<p>Sala:  &nbsp &nbsp L582 </p>
+    
+ 
+    
+<p>Hor&aacute;rio de atendimento: depois de cada aula </p>    
+    
+
+
+ 
+ <br>   
+
+
+<h3>Bibliografia </h3>    
+
+<p><font color=red>[Lima]</font> &nbsp Elon Lages Lima, <i>Curso de Análise Vol. 1</i>, 15ª edição, IMPA, Coleção Projeto Euclides (Capítulos 1-7)
+ </p>  
+    
+
+    
+<p><font color=red>[Tao]</font> &nbsp Terence Tao, <i>Analysis I</i>, Springer Singapore, Third Edition, 2015 (Capítulos 1-9)
+ </p>      
+
+ <br> 
+    
+    
+  
+
+<h3>Avalia&ccedil;&atilde;o </h3>       
+
+<p> Três provas escritas.</p>
+    
+<p> Datas das provas: 18 de setembro, 28 de outubro e 2 de dezembro. </p>
+    
+<p> Listas de exercícios para entregar durante o semestre.</p> 
+
+<p> Cálculo da nota final (critério 4): (G1+G2+G3)/3 </p>
+<p> Cada grau é calculado com base na prova escrita correspondente (80%) e nas listas de exercícios correspondentes (20%).</p>    
+    
+<br> 
+    
+<h3>Monitoria</h3>       
+
+<p>Monitor:  &nbsp &nbsp Pedro Budib </p> 
+
+<p>Email:  &nbsp &nbsp budibpedro [arroba] gmail [ponto] com </p>
+    
+<p>Horário e sala:  &nbsp &nbsp 2ª às 15h na sala L454</p>    
+    
+<br>     
+  
+<h3>Ementa do curso (sujeito a alterações)</h3> 
+<ol>
+  
+<li value="1"><a href="cap1.pdf">Teoria elementar dos conjuntos</a> 
+ <ol>
+<li>Conjuntos e operações entre conjuntos
+</li>
+<li>Funções
+</li>
+<li>Relações
+ </li>
+</ol>
+</li>
+    
+
+<li>Números naturais
+ <ol>
+<li>Axiomas de Peano</li>
+<li>Adição e multiplicação
+</li>
+<li>Ordem, princípio da boa ordenação, segundo princípio da indução
+</li>
+<li>Conjuntos finitos e infinitos</li>
+<li>Conjuntos enumeráveis e não enumeráveis</li>
+<li>Números inteiros</li>
+<li>A cardinalidade do conjunto de números inteiros</li>     
+</ol>
+</li>
+    
+<li>Números racionais 
+<ol>
+<li>A definição dos número racionais
+</li>
+<li>Operações algébricas e relação de ordem
+</li>
+<li>Corpos e corpos ordenados
+ </li>
+</ol>
+</li>    
+    
+<li>Números reais
+ <ol>
+<li>Sequências de números racionais
+</li>
+<li>Supremos de conjuntos de números racionais
+</li>
+<li>Elementos da construção dos números reais como limites de sequências de Cauchy de números racionais</li>
+<li>Definição axiomática do sistema de números reais
+</li>
+<li>Existência e unicidade do sistema de números reais
+</li>
+</ol>
+</li>    
+    
+<li>Sequências de números reais
+ <ol>
+<li>Definições básicas
+</li>
+<li>Limites e operações com limites
+</li>
+<li>Subsequências, o teorema de Bolzano-Weierstrass
+</li>
+<li>Sequências de Cauchy, o teorema de Cauchy</li>
+<li>Sequências não limitadas</li>
+<li>Séries de números reais, convergência, critérios de convergência</li>     
+</ol>
+</li>
+    
+    
+    
+<li>Elementos de topologia na reta
+ <ol>
+<li>Conjuntos abertos e fechados
+</li>
+<li>Conjuntos compactos
+</li>
+<li>O conjunto de Cantor</li>
+</ol>
+</li>    
+    
+</ol>
+    
+    
+    
+    
+    
+</main>
+
+        <footer>
+
+           
+
+        </footer>
+       
+    </body>
+
+</html>
+
